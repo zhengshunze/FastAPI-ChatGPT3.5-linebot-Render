@@ -16,6 +16,7 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 import openai, os
 	
 openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.base_url = os.getenv("BASE_URL")
 line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
 handler = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET")) 
 
